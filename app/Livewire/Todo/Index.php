@@ -6,22 +6,26 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $task = ''; 
-    public $tasks = []; 
+    public $task = ''; // متغیر برای ذخیره تسک جدید  
+    public $tasks = []; // آرایه برای ذخیره لیست تسک‌ها  
+
     public function mount()  
     {  
-        $this->tasks = []; 
+        $this->tasks = []; // مقداردهی اولیه آرایه tasks  
     }  
+
     public function addTask()  
-    {     
+    {  
+        // اطمینان از اینکه تسک خالی نیست  
         if ($this->task !== '') {  
-            $this->tasks[] = $this->task; 
-            $this->task = ''; 
+            $this->tasks[] = $this->task; // افزودن تسک جدید به آرایه  
+            $this->task = ''; // پاک کردن input بعد از افزودن تسک  
         }  
     }  
+
     public function clearTasks()  
     {  
-        $this->tasks = []; 
+        $this->tasks = []; // پاک کردن تمامی تسک‌ها  
     }  
 
     public function render()

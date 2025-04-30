@@ -28,7 +28,8 @@
         <h2 class="mt-5">Task List</h2>  
         <ul>  
             @foreach($tasks as $task)  
-                <li class="bg-gray-100 border border-gray-300 p-2 rounded-lg mb-2">{{ $task }}</li>  
+                {{-- <li class="bg-gray-100 border border-gray-300 p-2 rounded-lg mb-2">{{ $task }}</li>   --}}
+                <livewire:todo.Item :task="$task" :key="$task" /> 
             @endforeach  
         </ul>  
     </div>  
