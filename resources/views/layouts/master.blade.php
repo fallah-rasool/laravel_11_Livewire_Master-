@@ -45,11 +45,11 @@
  @yield('content')
 
             {{-- start app --}}
-                <h6> start app</h6>
+                {{-- <h6> start app</h6> --}}
 
                  <div id="app">@yield('app') </div>
 
-                <h6> end app</h6>
+                {{-- <h6> end app</h6> --}}
 
             {{-- end app --}}
 

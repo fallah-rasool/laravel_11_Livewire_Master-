@@ -30,5 +30,10 @@
                 <livewire:todo.Item :task="$task" :key="$task" /> 
             @endforeach  
         </ul>  
-    </div>     
+    </div>   
+    
+    <x-slot:copyright>
+        new Foooter
+    </x-slot:copyright>
+
 </div>
