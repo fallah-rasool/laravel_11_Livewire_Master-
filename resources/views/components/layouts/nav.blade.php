@@ -47,7 +47,13 @@
                         <a    
                         class="text-gray-900 dark:text-white hover:underline" 
 
-                        href="{{ route('page.counter.alpine')}}">Show-counterAlpine</a>
+                        href="{{ route('page.counter.alpine')}}">counterAlpine</a>
+                    </li>
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.security.concerns')}}">securityConcerns</a>
                     </li>
                 </ul>
             </div>

@@ -18,6 +18,7 @@ class CounterAlpine extends Component
 
     public function render()
     {
-        return view('livewire.counter-alpine');
+        return view('livewire.counter-alpine')
+        ->layout('components.layouts.with-navigation');
     }
 }

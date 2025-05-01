@@ -8,6 +8,7 @@ use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
+use App\Livewire\SecurityConcerns;
 use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use Illuminate\Support\Facades\Route;
@@ -51,4 +52,5 @@ Route::get('/login-test/{id}', function ($id) {
 
 Route::get('/showCustomer',ShowCustomer ::class)->name('page.show.customer');
 Route::get('/counterAlpine',CounterAlpine ::class)->name('page.counter.alpine');
+Route::get('/securityConcerns',SecurityConcerns ::class)->name('page.security.concerns');
 
