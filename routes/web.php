@@ -1,7 +1,12 @@
 <?php
+use Carbon\Carbon;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Livewire\Counter;
 use App\Livewire\PostWelcome;
+use App\Livewire\Profile;
 use App\Livewire\Todo\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +19,30 @@ Route::get('index',Index::class)->name('page.task');
 
 
 Route::get('/welcom/{email}',PostWelcome::class)->name('Page.Welcom');
+
+
+Route::get('/creat-user',static function(){
+    $time= time();
+   $user =  User::create(
+       [
+            'name'=>"user-$time",
+            'email'=>"user-$time",
+            'email_verified_at'=>Carbon::now(),
+            'password'=>'secret',
+        ]
+       );
+       dd($user);
+})->name('creat.user');
+
+Route::get('/profile/{user}', Profile::class)->name('page.user-profile');
+
+Route::get('/login-test/{id}', function ($id) {
+    $user = User::find($id);
+
+    if ($user) {
+        Auth::login($user);
+        return "✅ کاربر با ID {$id} با موفقیت لاگین شد. نام: {$user->name}";
+    } else {
+        return "❌ کاربری با این ID پیدا نشد.";
+    }
+})->name('login');

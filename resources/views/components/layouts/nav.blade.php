@@ -30,6 +30,13 @@
                         class="text-gray-900 dark:text-white hover:underline"                        
                         href="{{ route('Page.Welcom',['email'=>'rasool@gmail.com'])}}">Page.Welcom</a>
                     </li>
+
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.user-profile',['user'=>1])}}">profile</a>
+                    </li>
                 </ul>
             </div>
         </div>
