@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 use Livewire\Attributes\Layout;
+use Illuminate\Http\Response;
 
 use Livewire\Component;
 
@@ -23,7 +24,10 @@ class Counter extends Component
     public function render()
     {
         return view('livewire.counter')
-        ->layout('components.layouts.with-navigation');
-      
+        ->layout('components.layouts.with-navigation')
+        ->response(function(Response $response){
+            $response->header('XXXXXXXX-Rasool-Secret', 'cod ...');
+        });
+
     }
 }
