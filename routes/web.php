@@ -13,6 +13,7 @@ use App\Livewire\SecurityConcerns;
 use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
+use App\Livewire\PostComments;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -70,3 +71,6 @@ Route::get('/creat-post',static function(){
    return   redirect()->back();
       
 })->name('creat.post');
+
+
+Route::get('/posts/{post}', PostComments::class)->name('post.comments');
