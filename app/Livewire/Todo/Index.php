@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Livewire\Todo;
+use Livewire\Attributes\Title;
 
 use Livewire\Component;
 
+// #[Title('Create Post')] 
 class Index extends Component
 {
     public $task = ''; // متغیر برای ذخیره تسک جدید  
@@ -27,12 +29,14 @@ class Index extends Component
     {  
         $this->tasks = []; // پاک کردن تمامی تسک‌ها  
     }  
-
+    // #[Title('Create Post')] 
     public function render()
     {
         return view('livewire.todo.index')
         ->extends('layouts.master')
-        ->section('app');
+        ->section('app')
+        ->title('Create Post'); 
+      
         
     }
 }
