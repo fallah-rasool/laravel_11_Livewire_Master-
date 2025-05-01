@@ -8,5 +8,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/counter', Counter::class);
-Route::get('index',Index::class)->name('index.page');
+Route::get('/counter', Counter::class)->name('page.counter');
+Route::get('index',Index::class)->name('page.task');

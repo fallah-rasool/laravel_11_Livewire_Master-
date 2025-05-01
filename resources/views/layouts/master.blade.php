@@ -6,27 +6,52 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
-        @include('components.layouts.nav')
-        {{-- <header style="display: flex; justify-content: space-between;align-items: center; background-color: #763515; padding: 0 30px; gap: 32px; text-white;p-5">
-            <h1 class="text-white bg-gradient-to-r">layouts  Secondary </h1>
-            <nav >
-                <ul style="display: flex; align-items: center; justify-content: center; gap:64px ; align-content: center;list-style: none;padding: 0 ;margin: 0;">
-                   <li style="padding: 7px ;margin: 0 5px;">
-                        <a class="text-white bg-gradient-to-r" href="{{ route('counter.page')}}">Counter</a>
-                    </li>
-                    <li style="padding: 7px ;margin: 0 5px;">
-                        <a class="text-white bg-gradient-to-r" href="{{ route('index.page')}}">index</a>
-                    </li>
-                    <li style="padding: 7px ;margin: 0 5px;">
-                        <a class="text-white bg-gradient-to-r"  href="{{ route('post.crate') }}">post.crate</a>
-                    </li>
-                </ul>
+        <div class="px-2">    
+            <nav class="bg-white  border-green-200 dark:bg-green-900 text-white">
+                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+                    <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap ">Flowbite</span>
+                    </a>
+                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                        <a href="tel:5541251234" class="text-sm  text-white  hover:underline">(555) 412-1234</a>
+                        <a href="#" class="text-sm  text-white-600 hover:underline">Login</a>
+                    </div>
+                </div>
             </nav>
-        </header> --}}
+            <nav class="bg-white  border-green-200 dark:bg-green-600">
+                <div class="max-w-screen-xl px-4 py-3 mx-auto">
+                    <div class="flex items-center">
+                        <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                            <li>
+                                <a href="{{ route('home') }}" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('page.counter') }}" class="text-gray-900 dark:text-white hover:underline">counter</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('page.task') }}" class="text-gray-900 dark:text-white hover:underline">task</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>        
+        </div>
+       
 
-            @yield('content')
+ @yield('content')
 
-            <div id="app">@yield('app') </div>
+            {{-- start app --}}
+                <h6> start app</h6>
+
+                 <div id="app">@yield('app') </div>
+
+                <h6> end app</h6>
+
+            {{-- end app --}}
 
 
             <script src="https://cdn.tailwindcss.com"></script>

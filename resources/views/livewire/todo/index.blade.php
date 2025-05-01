@@ -1,6 +1,4 @@
 <div class="max-w-xl mx-auto px-5 m-5"> 
-
-
     <div>  
         <form class="max-w-sm mx-auto p-5 m-5">  
             <div class="mb-5">  
@@ -32,7 +30,5 @@
                 <livewire:todo.Item :task="$task" :key="$task" /> 
             @endforeach  
         </ul>  
-    </div>  
-    
-    
+    </div>     
 </div>

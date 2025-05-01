@@ -30,6 +30,9 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.todo.index');
+        return view('livewire.todo.index')
+        ->extends('layouts.master')
+        ->section('app');
+        
     }
 }

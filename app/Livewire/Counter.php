@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Livewire;
+use Livewire\Attributes\Layout;
 
 use Livewire\Component;
 
+// #[Layout('components.layouts.with-navigation')]
 class Counter extends Component
 {
     public $count = 1;
@@ -17,9 +19,11 @@ class Counter extends Component
     {
         $this->count--;
     }
- 
+    // #[Layout('components.layouts.with-navigation')]
     public function render()
     {
-        return view('livewire.counter');
+        return view('livewire.counter')
+        ->layout('components.layouts.with-navigation');
+      
     }
 }
