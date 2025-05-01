@@ -43,6 +43,12 @@
 
                         href="{{ route('page.show.customer')}}">Show-Customer</a>
                     </li>
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.counter.alpine')}}">Show-counterAlpine</a>
+                    </li>
                 </ul>
             </div>
         </div>

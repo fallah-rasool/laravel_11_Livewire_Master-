@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 use App\Livewire\Counter;
+use App\Livewire\CounterAlpine;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\ShowCustomer;
@@ -49,4 +50,5 @@ Route::get('/login-test/{id}', function ($id) {
 })->name('login');
 
 Route::get('/showCustomer',ShowCustomer ::class)->name('page.show.customer');
+Route::get('/counterAlpine',CounterAlpine ::class)->name('page.counter.alpine');
 
