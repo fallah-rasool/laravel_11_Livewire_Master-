@@ -6,11 +6,14 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
+use App\Livewire\EditPost;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\SecurityConcerns;
 use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
+use App\Livewire\Post as PostLivewire;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -54,3 +57,16 @@ Route::get('/showCustomer',ShowCustomer ::class)->name('page.show.customer');
 Route::get('/counterAlpine',CounterAlpine ::class)->name('page.counter.alpine');
 Route::get('/securityConcerns',SecurityConcerns ::class)->name('page.security.concerns');
 
+Route::get('/post', PostLivewire::class)->name('all.post');
+Route::get('/edit-post/{post}', EditPost::class)->name('edit.post');
+
+Route::get('/creat-post',static function(){
+   $user =  Post::create(
+       [
+            'title'=>"عنوان پیش فرض",
+            'content'=>"محتوای پیش فرض",
+         ]
+       );
+   return   redirect()->back();
+      
+})->name('creat.post');
