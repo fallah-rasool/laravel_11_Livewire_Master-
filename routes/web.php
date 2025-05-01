@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Livewire\Counter;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
+use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -46,3 +47,6 @@ Route::get('/login-test/{id}', function ($id) {
         return "❌ کاربری با این ID پیدا نشد.";
     }
 })->name('login');
+
+Route::get('/showCustomer',ShowCustomer ::class)->name('page.show.customer');
+

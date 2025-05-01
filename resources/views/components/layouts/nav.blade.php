@@ -37,6 +37,12 @@
 
                         href="{{ route('page.user-profile',['user'=>1])}}">profile</a>
                     </li>
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.show.customer')}}">Show-Customer</a>
+                    </li>
                 </ul>
             </div>
         </div>
