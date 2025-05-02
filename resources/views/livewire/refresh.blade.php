@@ -1,6 +1,6 @@
 <div class="max-w-xl mx-auto px-5 m-5"> 
     <div>
-        <h1>        This is Export Page    </h1>    <hr>
+        <h1>      Refreshing a component    </h1>    <hr>
         <div class="center-page">                   
     <h2 class=" my-5">   Current Status :
                 @empty($downloadable_at)
@@ -61,6 +61,25 @@
                 @endif
             @endempty
         </div>
+
+        <hr>
+        <h1> 
+            <strong>
+                Confirming an action
+            </strong>
+            </h1>
+            <br>
+        <button
+        type="button"
+        wire:click="delete"
+        wire:confirm="Are you sure you want to delete this post?"
+
+         class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+    >
+        Delete post 
+    </button>
+    
+
     </div>
     
 
