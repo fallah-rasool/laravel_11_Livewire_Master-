@@ -5,11 +5,28 @@
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">laravel_11_Livewire_Master</span>
             </a>
+    
+    @auth
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <div class="text-white">
+                سلام
+                <strong>
+                    {{ auth()->user()->name }}
+                </strong>
+                 
+            </div>
+            <a href="{{ route('logout') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">logout</a>
+        </div>
+    @else
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-                <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+                <div class="text-white">
+                    شما لاگین نیستید
+                </div>
+                <a href="{{ route('simulate-login') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
             </div>
         </div>
+    @endauth 
+
     </nav>
     <nav class="bg-gray-50 dark:bg-gray-700">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">

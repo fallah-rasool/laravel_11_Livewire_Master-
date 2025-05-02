@@ -43,16 +43,17 @@ Route::get('/creat-user',static function(){
 
 Route::get('/profile/{user}', Profile::class)->name('page.user-profile');
 
-Route::get('/login-test/{id}', function ($id) {
+Route::get('/login-byId/{id}', function ($id) {
     $user = User::find($id);
 
     if ($user) {
         Auth::login($user);
-        return "✅ کاربر با ID {$id} با موفقیت لاگین شد. نام: {$user->name}";
+        return redirect('/');
+        // return "✅ کاربر با ID {$id} با موفقیت لاگین شد. نام: {$user->name}";
     } else {
         return "❌ کاربری با این ID پیدا نشد.";
     }
-})->name('login');
+})->name('login-by-id');
 
 Route::get('/showCustomer',ShowCustomer ::class)->name('page.show.customer');
 Route::get('/counterAlpine',CounterAlpine ::class)->name('page.counter.alpine');
@@ -74,3 +75,16 @@ Route::get('/creat-post',static function(){
 
 
 Route::get('/posts/{post}', PostComments::class)->name('post.comments');
+
+Route::get('/simulate-login', function () {
+    $user = User::first();
+    Auth::login($user);
+    return redirect('/');
+})->name('simulate-login');
+
+Route::get('/logout', function () {  
+    Auth::logout(); // کاربر رو لاگ‌ آوت می‌کنه  
+    return redirect('/'); // یا هر صفحه‌ای که می‌خوای بعد از logout بره  
+})->name('logout');
+
+Route::get('/todos', \App\Livewire\ShowTodos::class)->middleware('auth');

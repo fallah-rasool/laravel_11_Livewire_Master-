@@ -13,10 +13,36 @@
                         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap ">Flowbite</span>
                     </a>
-                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                        <a href="tel:5541251234" class="text-sm  text-white  hover:underline">(555) 412-1234</a>
-                        <a href="#" class="text-sm  text-white-600 hover:underline">Login</a>
+                     @auth
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <div class="text-white">
+                 {{ auth()->user()->name }}
+                 سلام
+            </div>
+            <a href="{{ route('logout') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">logout</a>
+        </div>
+    @else
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                @auth
+                <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                    <div class="text-white">
+                         {{ auth()->user()->name }}
+                         سلام
                     </div>
+                    <a href="{{ route('logout') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">logout</a>
+                </div>
+            @else
+                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                        <div class="text-white">
+                            شما لاگین نیستید
+                        </div>
+                        <a href="{{ route('simulate-login') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+                    </div>
+                </div>
+            @endauth 
+            </div>
+        </div>
+    @endauth 
                 </div>
             </nav>
             <nav class="bg-white  border-green-200 dark:bg-green-600">
