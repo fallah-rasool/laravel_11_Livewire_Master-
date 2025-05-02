@@ -57,11 +57,9 @@
                         Refresh  Using Alpaine
                         </button>
                 </div>
-
                 @endif
             @endempty
         </div>
-
         <hr>
         <h1> 
             <strong>

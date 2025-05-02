@@ -84,6 +84,12 @@
 
                         href="{{ route('page.refresh')}}"> refresh</a>
                     </li>
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.event.listener')}}"> event.listener</a>
+                    </li>
                    
                   
                 </ul>

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
 use App\Livewire\EditPost;
+use App\Livewire\EventListener;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\SecurityConcerns;
@@ -91,3 +92,4 @@ Route::get('/logout', function () {
 Route::get('/todos', \App\Livewire\ShowTodos::class)->middleware('auth');
 
 Route::get('/refresh', Refresh::class)->name('page.refresh');
+Route::get('/event-listeners', EventListener::class)->name('page.event.listener');
