@@ -14,6 +14,7 @@ use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
 use App\Livewire\PostComments;
+use App\Livewire\Refresh;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -88,3 +89,5 @@ Route::get('/logout', function () {
 })->name('logout');
 
 Route::get('/todos', \App\Livewire\ShowTodos::class)->middleware('auth');
+
+Route::get('/refresh', Refresh::class)->name('page.refresh');
