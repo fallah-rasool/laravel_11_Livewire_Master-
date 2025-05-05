@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
+use App\Livewire\DispatchListening;
 use App\Livewire\EditPost;
 use App\Livewire\EventListener;
 use App\Livewire\PostWelcome;
@@ -16,6 +17,7 @@ use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
 use App\Livewire\PostComments;
 use App\Livewire\Refresh;
+use App\Livewire\TaskList;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -93,3 +95,6 @@ Route::get('/todos', \App\Livewire\ShowTodos::class)->middleware('auth');
 
 Route::get('/refresh', Refresh::class)->name('page.refresh');
 Route::get('/event-listeners', EventListener::class)->name('page.event.listener');
+
+Route::get('/dispatchListening',DispatchListening::class)->name('page.dispatchListening');
+Route::get('/task-list',TaskList::class)->name('page.task.list');

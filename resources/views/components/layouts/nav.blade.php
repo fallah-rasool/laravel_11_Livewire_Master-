@@ -88,7 +88,21 @@
                         <a    
                         class="text-gray-900 dark:text-white hover:underline" 
 
-                        href="{{ route('page.event.listener')}}"> event.listener</a>
+                        href="{{ route('page.event.listener')}}">listener</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.dispatchListening')}}"> dispatch</a>
+                    </li>
+                   
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('page.task.list')}}"> task.list</a>
                     </li>
                    
                   

@@ -25,7 +25,6 @@
 
 
         <script src="https://cdn.tailwindcss.com"></script>
-        <cript src="//cdn.jsdelivr.net/npm/alpinejs" defer></script>  
-        @livewireScripts 
+    
     </body>
 </html>

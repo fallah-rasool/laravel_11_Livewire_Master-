@@ -8,7 +8,7 @@ use Livewire\Attributes\Computed;
 
 class ShowTodos extends Component
 {
-    
+    // public $todos;
     // public function mount()
     // {
     //     $this->todos = Auth::user()
