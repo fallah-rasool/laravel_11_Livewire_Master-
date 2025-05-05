@@ -9,6 +9,8 @@ use App\Livewire\CounterAlpine;
 use App\Livewire\DispatchListening;
 use App\Livewire\EditPost;
 use App\Livewire\EventListener;
+use App\Livewire\IsMagic;
+use App\Livewire\MagicActions;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\SecurityConcerns;
@@ -98,3 +100,8 @@ Route::get('/event-listeners', EventListener::class)->name('page.event.listener'
 
 Route::get('/dispatchListening',DispatchListening::class)->name('page.dispatchListening');
 Route::get('/task-list',TaskList::class)->name('page.task.list');
+
+
+Route::get('/magic-actions',MagicActions::class )->name('page.magic.actions');
+
+Route::get('/is-magic',IsMagic::class )->name('page.is.magic');

@@ -7,13 +7,11 @@ use Livewire\Component;
 
 class Post extends Component
 {
-
     public  $posts;
 
     public function mount()
     {
-       $this->posts = ModelsPost::all();       
-
+       $this->posts = ModelsPost::all();      
     }
 
     public function render()
