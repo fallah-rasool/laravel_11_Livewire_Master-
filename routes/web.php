@@ -11,6 +11,7 @@ use App\Livewire\EditPost;
 use App\Livewire\EventListener;
 use App\Livewire\IsMagic;
 use App\Livewire\MagicActions;
+use App\Livewire\ParentMy;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\SecurityConcerns;
@@ -105,3 +106,6 @@ Route::get('/task-list',TaskList::class)->name('page.task.list');
 Route::get('/magic-actions',MagicActions::class )->name('page.magic.actions');
 
 Route::get('/is-magic',IsMagic::class )->name('page.is.magic');
+
+
+Route::get('/parent-my',ParentMy::class)->name('page.parent.my');

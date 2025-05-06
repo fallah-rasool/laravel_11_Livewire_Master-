@@ -97,14 +97,14 @@
                         <a    
                         class="text-gray-900 dark:text-white hover:underline" 
 
-                        href="#"> اکشتن</a>
+                        href="#"> dispatch</a>
                       
-                        <ul class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md mt-1 rounded-md w-40 z-10">
+                        <ul class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md  rounded-md w-40 z-10">
                             <li>
                                 <a    
                                 class="block px-4 py-2 hover:bg-gray-100" 
         
-                                href="{{ route('page.dispatchListening')}}"> dispatch</a>
+                                href="{{ route('page.dispatchListening')}}"> dispatchListening</a>
                             </li>
                             <li> 
                                 <a class="block px-4 py-2 hover:bg-gray-100" 
@@ -112,14 +112,29 @@
                                 href="{{ route('page.task.list')}}"> task.list</a>
                            
                              </li>
-                            <li> 
-                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.magic.actions')}}">magic.actions</a>
-                            </li>
+                        
                           </ul>
                     </li>
+                    <li class="relative group">
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
 
+                        href="#"> magic.actions</a>
 
-                </ul>
+                        <ul class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md  rounded-md w-40 z-10">
+
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.magic.actions')}}">actions</a>
+                            </li>
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.is.magic')}}">toggle and set</a>
+                            </li>
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.parent.my')}}">parent.my</a>
+                            </li>
+
+                         </ul>
+                    </li>
             </div>
         </div>
     </nav>
