@@ -20,6 +20,7 @@ use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
 use App\Livewire\PostComments;
 use App\Livewire\Refresh;
+use App\Livewire\SkippingReRenders;
 use App\Livewire\TaskList;
 use App\Livewire\TodoList;
 use App\Models\Post;
@@ -112,3 +113,5 @@ Route::get('/is-magic',IsMagic::class )->name('page.is.magic');
 Route::get('/parent-my',ParentMy::class)->name('page.parent.my');
 
 Route::get('/todo-list',TodoList::class)->name('page.todo.list');
+
+Route::get('/skipping-re-renders',SkippingReRenders::class)->name('page.skipping.re.renders');

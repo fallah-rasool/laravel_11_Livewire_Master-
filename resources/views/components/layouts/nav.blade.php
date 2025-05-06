@@ -135,6 +135,9 @@
                             <li> 
                                 <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.todo.list')}}">todo.list</a>
                             </li>
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.skipping.re.renders')}}">skipping.re.renders</a>
+                            </li>
 
                          </ul>
                     </li>
