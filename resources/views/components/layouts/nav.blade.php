@@ -138,6 +138,9 @@
                             <li> 
                                 <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.skipping.re.renders')}}">skipping.re.renders</a>
                             </li>
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.hybrid')}}">page.hybrid</a>
+                            </li>
 
                          </ul>
                     </li>
