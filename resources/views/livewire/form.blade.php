@@ -1,14 +1,20 @@
 <div class="max-w-xl px-5 m-5 mx-auto" dir="rtl"> 
 
     <form wire:submit.prevent="addfullName">
+
+        <h1>
+            Adding validation
+        </h1>
+        <h1>-------------------------------------------------------</h1>
                    
         <div class="flex justify-between">
+            
             <label for="fullname"> full name</label>
             <input  wire:model.blur="fullname"  type="text"  id="fullname"  
             class="p-2 text-green-900 border border-green-500 bg-green-50"
             >
             @error('fullname') <span class="error">{{ $message }}</span> @enderror
-            <br>
+            
         </div>
 
         <div class="flex justify-between mt-5">

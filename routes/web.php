@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
+use App\Livewire\CreatePost;
 use App\Livewire\DispatchListening;
 use App\Livewire\EditPost;
 use App\Livewire\EventListener;
@@ -121,3 +122,5 @@ Route::get('/skipping-re-renders',SkippingReRenders::class)->name('page.skipping
 Route::get('/hybrid',Hybrid::class)->name('page.hybrid');
 
 Route::get('/form',Form::class)->name('page.form');
+
+Route::get('/CreatePost',CreatePost::class)->name('page.CreatePost');
