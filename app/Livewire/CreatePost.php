@@ -13,11 +13,9 @@ class CreatePost extends Component
     public function save()
     {
       $ttt=  $this->validate();
+     
+       $this->form->store(); 
 
-        Post::create(
-            $this->form->all() 
-        );
- 
         return $this->redirect('/post');
     }
     
