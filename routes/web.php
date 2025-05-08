@@ -9,6 +9,7 @@ use App\Livewire\CounterAlpine;
 use App\Livewire\DispatchListening;
 use App\Livewire\EditPost;
 use App\Livewire\EventListener;
+use App\Livewire\Form;
 use App\Livewire\Hybrid;
 use App\Livewire\IsMagic;
 use App\Livewire\MagicActions;
@@ -118,3 +119,5 @@ Route::get('/todo-list',TodoList::class)->name('page.todo.list');
 Route::get('/skipping-re-renders',SkippingReRenders::class)->name('page.skipping.re.renders');
 
 Route::get('/hybrid',Hybrid::class)->name('page.hybrid');
+
+Route::get('/form',Form::class)->name('page.form');
