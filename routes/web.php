@@ -24,6 +24,7 @@ use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
 use App\Livewire\PostComments;
+use App\Livewire\PostCreate;
 use App\Livewire\Refresh;
 use App\Livewire\ShowAllPost;
 use App\Livewire\SkippingReRenders;
@@ -131,4 +132,6 @@ Route::get('/CreatePost',CreatePost::class)->name('page.CreatePost');
 
 Route::get('/posts/{post}/edit', UpdatePost::class)->name('posts.edit');
 
-Route::get('/posts', AllPosts::class)->name('posts.index');
+Route::get('/posts-index', AllPosts::class)->name('posts.index');
+
+Route::get('/Post-Create',PostCreate::class)->name('page.Post.Create');

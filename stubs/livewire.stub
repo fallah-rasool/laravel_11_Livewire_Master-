@@ -8,6 +8,7 @@ class [class] extends Component
 {
     public function render()
     {
-        return view('[view]');
+        return view('[view]')
+        ->layout('components.layouts.with-navigation');
     }
 }
