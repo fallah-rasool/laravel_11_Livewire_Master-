@@ -1,11 +1,11 @@
 <div class="max-w-xl px-5 m-5 mx-auto" dir="rtl"> 
 
     <h1>
-        Extracting a form object
+        Extracting a form object ---  Create new Post
     
     </h1>
 
-    <h1>-------------------------------------------------------------------------------</h1>
+    <h1>----------------------------------------------------------------------------------</h1>
 
     
     <form wire:submit="save">

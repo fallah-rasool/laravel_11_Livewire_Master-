@@ -177,6 +177,10 @@
                             <li> 
                                 <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('page.CreatePost')}}">form object</a>
                             </li>
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100"  href="{{ route('posts.index')}}">posts.index</a>
+                            </li>
+                           
                         </ul>
                     </li>
             </div>

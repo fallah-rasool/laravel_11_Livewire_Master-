@@ -9,17 +9,12 @@ use App\Livewire\Forms\PostForm;
 class CreatePost extends Component
 {
     public PostForm $form; 
-
     public function save()
     {
-      $ttt=  $this->validate();
-     
+      $ttt=  $this->validate();     
        $this->form->store(); 
-
         return $this->redirect('/post');
-    }
-    
-
+    }   
     public function render()
     {
         return view('livewire.create-post')

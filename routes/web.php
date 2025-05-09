@@ -1,4 +1,6 @@
 <?php
+
+use App\Livewire\AllPosts;
 use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -23,9 +25,11 @@ use App\Livewire\Todo\Index;
 use App\Livewire\Post as PostLivewire;
 use App\Livewire\PostComments;
 use App\Livewire\Refresh;
+use App\Livewire\ShowAllPost;
 use App\Livewire\SkippingReRenders;
 use App\Livewire\TaskList;
 use App\Livewire\TodoList;
+use App\Livewire\UpdatePost;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -124,3 +128,7 @@ Route::get('/hybrid',Hybrid::class)->name('page.hybrid');
 Route::get('/form',Form::class)->name('page.form');
 
 Route::get('/CreatePost',CreatePost::class)->name('page.CreatePost');
+
+Route::get('/posts/{post}/edit', UpdatePost::class)->name('posts.edit');
+
+Route::get('/posts', AllPosts::class)->name('posts.index');
