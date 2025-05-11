@@ -13,7 +13,7 @@ class CreatePost extends Component
     {
       $ttt=  $this->validate();     
        $this->form->store(); 
-        return $this->redirect('/post');
+       // return $this->redirect('/post');
     }   
     public function render()
     {

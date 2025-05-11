@@ -25,9 +25,12 @@ class PostForm extends Form
 
     public function store() 
     {
+        sleep(5); // Simulate a long-running process
         $this->validate();
  
         Post::create($this->all());
+
+        $this->reset();
     }
 
     

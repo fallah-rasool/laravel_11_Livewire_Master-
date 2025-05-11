@@ -36,7 +36,8 @@
         <div>
             @error('form.content') <span class="error">{{ $message }}</span> @enderror
         </div>            
-        <button type="submit">Save</button>
-    </form>
+       <button type="submit">Save  </button>
+    </form>   
+
     
 </div>
