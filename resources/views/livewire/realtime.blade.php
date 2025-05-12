@@ -40,4 +40,35 @@
 
     </div>
 
+
+    <div>
+        <br>        <br>
+        <h1>-----------------------------------------------------------------------------------</h1>
+        <div class="flex justify-between" dir="rtl">
+            
+            <h1>ساخت کامپوننت پیشرفته‌تر با Alpine و Livewire  </h1>
+            <h1>Custom form controls</h1> 
+        </div>
+        
+        {{-- <div x-data="{ count: 0 }" class="flex justify-between p-5">
+            
+            <button 
+    
+            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2.5 me-2 mb-2" 
+            x-on:click="count--">-</button>
+         
+            <span x-text="count"
+            class="text-lg"
+            ></span>
+         
+            <button x-on:click="count++"
+            class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5 me-2 mb-2"  
+            >+</button>
+        </div> --}}
+
+
+        <x-form.count wire:model='count' />
+        
+    </div>
+
 </div>
