@@ -13,21 +13,31 @@
         You're looking for: {{ $query }}
     </p>
     <div>
-        <label for="input-search">
+        {{-- <label for="input-search">
             Search <span>*</span>
         </label>
-        <br>
-        <input
+        <br> --}}
+        {{-- <input
            class="p-2 text-green-900 border border-green-500 bg-green-50"
     
             {{-- wire:model.blur="query" --}}
             {{-- wire:model.live.debounce.500ms="query" --}}
             {{-- wire:model.live.throttle.1000ms="query" --}}
-            wire:model.live.throttle="query"
+           {{--     wire:model.live.throttle="query"
             id="input-search"
             name="query"
             type="text"
         >
+        resources\views\components\form\input\idex.blade.php
+         --}}
+         <x-form.input
+                key="search"
+                label="Search"
+                model="query"
+                name="queryname"
+                type="text"
+             />
+
     </div>
 
 </div>
