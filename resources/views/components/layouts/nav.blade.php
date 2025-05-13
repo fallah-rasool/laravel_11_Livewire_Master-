@@ -187,6 +187,18 @@
                            
                         </ul>
                     </li>
+                    <li class="relative group">
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+                        href="{{ route('page.dashbord')}}"
+                        href="#"> dashbord</a>
+                     
+                        {{-- <li> 
+                            <a class="block px-4 py-2 hover:bg-gray-100"  
+                            href="{{ route('page.realtime')}}">realtime</a>
+                        </li> --}}
+                        
+                    </li>
             </div>
         </div>
     </nav>

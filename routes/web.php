@@ -16,6 +16,7 @@ use App\Livewire\Form;
 use App\Livewire\Hybrid;
 use App\Livewire\IsMagic;
 use App\Livewire\MagicActions;
+use App\Livewire\Pages\Dashbord;
 use App\Livewire\ParentMy;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
@@ -138,3 +139,6 @@ Route::get('/posts-index', AllPosts::class)->name('posts.index');
 Route::get('/Post-Create',PostCreate::class)->name('page.Post.Create');
 
 Route::get('/realtime',Realtime::class)->name('page.realtime');
+
+
+Route::get('/dashbord',Dashbord::class)->name('page.dashbord');
