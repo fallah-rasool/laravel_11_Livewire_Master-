@@ -12,6 +12,7 @@ use App\Livewire\CreatePost;
 use App\Livewire\DispatchListening;
 use App\Livewire\EditPost;
 use App\Livewire\EventListener;
+use App\Livewire\Events;
 use App\Livewire\Form;
 use App\Livewire\Hybrid;
 use App\Livewire\IsMagic;
