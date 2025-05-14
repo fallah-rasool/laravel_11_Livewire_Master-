@@ -4,6 +4,20 @@
         {{ $message }}
         </div>
     @endif
+
+    @script
+        <script>
+            let id = null;
+                $wire.on('hide-notification',()=>{
+                  
+                clearTimeout(id);
+
+                id =setTimeout(() => {
+                        $wire.set('is_visible', false);                        
+                    }, 3000);
+                });
+        </script>
+    @endscript
 </div>
 
 
