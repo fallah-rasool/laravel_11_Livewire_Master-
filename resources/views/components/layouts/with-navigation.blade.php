@@ -15,7 +15,7 @@
         
         {{ $slot }}
 
-        <Footer class="max-w-xl mx-auto px-5 m-5 bg-green-500 py-5 ">
+        <Footer class="px-5 py-5 m-5 mx-auto bg-green-500 ">
             <H2>Footer</H2>
             <hr>
             <div>
@@ -25,6 +25,5 @@
 
 
         <script src="https://cdn.tailwindcss.com"></script>
-    
     </body>
 </html>

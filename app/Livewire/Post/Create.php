@@ -21,19 +21,21 @@ class Create extends Component
 
     public function create (): void
     {        
-        $this->validate();  
-        
+        $this->validate();          
         $post =Post::create([
             'title' => $this->title,
             'content' => $this->content,
             'is_published' => false,
         ]);
-
         $this->dispatch(
             event: 'notify', 
-            message : $this->title .' Post created successfully!',
-           
-        );
+            message : $this->title .' Post created successfully!',           
+        );        
+        $this->dispatch(
+            event: 'post-created',                     
+        )->to(PostList::class);
+
+
 
         // $this->dispatchBrowserEvent('post-created');
    

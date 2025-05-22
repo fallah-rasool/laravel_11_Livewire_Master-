@@ -11,13 +11,13 @@ class Notification extends Component
 
     public bool $is_visible = false;
 
-    #[On('notify')]
-    public function show( string $message): void
-    {
-        $this->is_visible = true;
-        $this->message= $message;
-       $this->dispatch('hide-notification'); 
-    }
+    // #[On('notify')]
+    // public function show( string $message): void
+    // {
+    //     $this->is_visible = true;
+    //     $this->message= $message;
+    //    $this->dispatch('hide-notification')->self(); 
+    // }
 
     public function render()
     {

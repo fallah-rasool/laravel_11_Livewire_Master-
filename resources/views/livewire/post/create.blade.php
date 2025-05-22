@@ -54,3 +54,11 @@
 
         </form>
     </div></div>
+
+    {{-- @script
+        <script>
+        Livewire.on('hide', (event) => {           
+            console.log('hide called form  Creat Poat ');                
+        });
+        </script>
+    @endscript --}}
