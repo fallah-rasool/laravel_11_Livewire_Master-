@@ -16,6 +16,7 @@ use App\Livewire\Events;
 use App\Livewire\Form;
 use App\Livewire\Hybrid;
 use App\Livewire\IsMagic;
+use App\Livewire\Lifecycle;
 use App\Livewire\MagicActions;
 use App\Livewire\Pages\Dashbord;
 use App\Livewire\ParentMy;
@@ -143,3 +144,7 @@ Route::get('/realtime',Realtime::class)->name('page.realtime');
 
 
 Route::get('/dashbord',Dashbord::class)->name('page.dashbord');
+
+Route::get('/lifecycle',Lifecycle::class)->name('page.lifecycle');
+
+Route::get('/lifecycle/{id}',Lifecycle::class)->name('page.lifecycle.id');
