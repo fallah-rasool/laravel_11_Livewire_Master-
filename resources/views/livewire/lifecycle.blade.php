@@ -29,4 +29,64 @@
     <p>
         Boot Calls: {{ $boot_calls }} times
     </p>
+
+
+
+    <hr style="color: #000;border: #929292 solid 1px;margin: 10px 0;">
+
+    <h1> <strong>Update Hooks</strong> </h1>
+    <div>
+        <label for="input-user_id">
+            User ID
+        </label>
+        <br>
+        <input
+            id="input-user_id"
+            type="text"
+            name="user_id"
+            wire:model.blur="user_id"
+            class="p-2 text-green-900 border border-green-500 bg-green-50"
+        >
+    </div>
+    <br>
+    <div>
+        <label for="input-username">
+            Username
+        </label>
+        <br>
+        <input
+            id="input-username"
+            type="text"
+            name="username"
+            wire:model.blur="username"
+            class="p-2 text-green-900 border border-green-500 bg-green-50"
+        >
+        @error('username')
+        <p style="color: indianred; font-size: 0.8rem">
+            {{ $message }}
+        </p>
+        @enderror
+    </div>
+    <br>
+    <div>
+        <label for="input-email">
+            Email
+        </label>
+        <br>
+        <input
+            id="input-email"
+            type="text"
+            name="email"
+            wire:model.blur="email"
+            class="p-2 text-green-900 border border-green-500 bg-green-50"
+        >
+        @error('email')
+        <p style="color: indianred; font-size: 0.8rem">
+            {{ $message }}
+        </p>
+        @enderror
+    </div>
+    <br>
+    <br>
+    <br>
 </div>
