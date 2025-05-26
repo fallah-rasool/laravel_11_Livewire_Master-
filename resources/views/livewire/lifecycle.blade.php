@@ -105,6 +105,17 @@
     </button>
     <br>
     
+    <hr style="color: #000;border: #929292 solid 1px;margin: 10px 0;">
+
+    <div style="text-align: center">
+        <h1 style="color: indianred">
+            Exception Occurred.
+        </h1>
+        <p>
+            {{ $exception_message }}
+        </p>
+    </div>
+    
     <br>
     <br>
 </div>

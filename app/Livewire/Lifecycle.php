@@ -3,11 +3,15 @@
 namespace App\Livewire;
 
 use App\DataTransferObjects\Post\PostDto;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Livewire\Component;
 use Exception;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\PostDec;
+use Illuminate\Database\QueryException;
+
 
 class Lifecycle extends Component
 {  
@@ -28,6 +32,10 @@ class Lifecycle extends Component
     public ?string $uuid;
 
     public  $post;
+  
+    
+
+    public string $exception_message = '';
 
     public function mount(string $uuidOrTitle = null, string $caption = null): void
     {
@@ -38,8 +46,13 @@ class Lifecycle extends Component
 
         $this->mount_called ++;
         // $this->mount_id= $id;
+        if (Route::is('page.exception'))
+        {
+            Post::find($this->postId);
+         
 
-        if (Route::is('page.uuid'))
+        }
+        else if (Route::is('page.uuid'))
         {
             $this->uuid = $uuidOrTitle;
         }
@@ -48,6 +61,8 @@ class Lifecycle extends Component
             // Initial Request
             $this->post = new PostDto($uuidOrTitle, $caption, 0);
         }
+
+
 
     }
 
@@ -107,7 +122,10 @@ class Lifecycle extends Component
     public function hydrate(): void
     {
         // Runs at the beginning of every "subsequent" request.
+        if (is_array($this->post))
+        {
         $this->post = PostDto::fromArray($this->post);
+        }
     }
 
     /**
@@ -123,12 +141,22 @@ class Lifecycle extends Component
 
        // dd($this->post->toArray());
         // Runs at the end of every single request.
-        $this->post = $this->post->toArray();
+        $this->post = $this->post?->toArray();
     }
 
     public function magic(): void
     {
         $this->post->like();
+    }
+
+    public function exception($e, $stopPropagation) {
+
+     
+        $this->exception_message = $e->getMessage();
+        // $this->exception_message ='This is error : '.$e->getMessage();
+        $stopPropagation();
+      
+
     }
 
 

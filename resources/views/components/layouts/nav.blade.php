@@ -200,10 +200,12 @@
                         href="{{ route('page.lifecycle')}}"
                         href="#">Lifecycle </a>
                      
-                        {{-- <li> 
-                            <a class="block px-4 py-2 hover:bg-gray-100"  
-                            href="{{ route('page.realtime')}}">realtime</a>
-                        </li> --}}
+                        <ul class="absolute left-0 z-10 hidden w-40 bg-white rounded-md shadow-md top-full group-hover:block">
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100" 
+                                href="{{ route('page.exception')}}">exception</a>
+                            </li>
+                        </ul>
                         
                     </li>
             </div>

@@ -151,3 +151,4 @@ Route::get('/lifecycle/{uuidOrTitle}',Lifecycle::class)->name('page.uuid');
 
 Route::get('/post/{uuidOrTitle}/{caption}', LifeCycle::class)->name('page.post');
 
+Route::get('/exception', LifeCycle::class)->name('page.exception');
