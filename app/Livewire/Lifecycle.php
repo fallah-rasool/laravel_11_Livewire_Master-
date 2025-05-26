@@ -2,9 +2,12 @@
 
 namespace App\Livewire;
 
+use App\DataTransferObjects\Post\PostDto;
 use Illuminate\Http\Request;
 use Livewire\Component;
 use Exception;
+use Illuminate\Support\Facades\Route;
+use PhpParser\Node\Expr\PostDec;
 
 class Lifecycle extends Component
 {  
@@ -22,7 +25,11 @@ class Lifecycle extends Component
 
     public int $user_id = 1;
 
-    public function mount(string $id = null)
+    public ?string $uuid;
+
+    public  $post;
+
+    public function mount(string $uuidOrTitle = null, string $caption = null): void
     {
       
         //on Component Create
@@ -30,7 +37,17 @@ class Lifecycle extends Component
         $this->creation_time= time();
 
         $this->mount_called ++;
-        $this->mount_id= $id;
+        // $this->mount_id= $id;
+
+        if (Route::is('page.uuid'))
+        {
+            $this->uuid = $uuidOrTitle;
+        }
+        else if (Route::is('page.post'))
+        {
+            // Initial Request
+            $this->post = new PostDto($uuidOrTitle, $caption, 0);
+        }
 
     }
 
@@ -45,7 +62,7 @@ class Lifecycle extends Component
     public function updating(string $property, mixed $value): void
     {
 
-        dd($property, $value);
+      //  dd($property, $value);
         
         if ($property === 'user_id')
         {
@@ -87,6 +104,32 @@ class Lifecycle extends Component
     }
 
 
+    public function hydrate(): void
+    {
+        // Runs at the beginning of every "subsequent" request.
+        $this->post = PostDto::fromArray($this->post);
+    }
+
+    /**
+     * Dehydrate the data
+     *
+     * This method is called at the end of every single request
+     * to convert the "post" property to an array.
+     *
+     * @return void
+     */
+    public function dehydrate(): void
+    {
+
+       // dd($this->post->toArray());
+        // Runs at the end of every single request.
+        $this->post = $this->post->toArray();
+    }
+
+    public function magic(): void
+    {
+        $this->post->like();
+    }
 
 
     public function render()

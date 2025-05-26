@@ -147,4 +147,7 @@ Route::get('/dashbord',Dashbord::class)->name('page.dashbord');
 
 Route::get('/lifecycle',Lifecycle::class)->name('page.lifecycle');
 
-Route::get('/lifecycle/{id}',Lifecycle::class)->name('page.lifecycle.id');
+Route::get('/lifecycle/{uuidOrTitle}',Lifecycle::class)->name('page.uuid');
+
+Route::get('/post/{uuidOrTitle}/{caption}', LifeCycle::class)->name('page.post');
+
