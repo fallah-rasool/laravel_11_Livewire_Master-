@@ -18,6 +18,7 @@ use App\Livewire\Hybrid;
 use App\Livewire\IsMagic;
 use App\Livewire\Lifecycle;
 use App\Livewire\MagicActions;
+use App\Livewire\Nesting\NestingDashboard;
 use App\Livewire\Pages\Dashbord;
 use App\Livewire\ParentMy;
 use App\Livewire\PostWelcome;
@@ -152,3 +153,7 @@ Route::get('/lifecycle/{uuidOrTitle}',Lifecycle::class)->name('page.uuid');
 Route::get('/post/{uuidOrTitle}/{caption}', LifeCycle::class)->name('page.post');
 
 Route::get('/exception', LifeCycle::class)->name('page.exception');
+
+Route::get('/exception', LifeCycle::class)->name('page.exception');
+
+Route::get('/nesting-dashboard',NestingDashboard::class)->name('page.nesting.dashboard');

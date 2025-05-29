@@ -208,6 +208,20 @@
                         </ul>
                         
                     </li>
+                    <li class="relative group">
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+                       
+                        href="#">nesting </a>
+                     
+                        <ul class="absolute left-0 z-10 hidden w-40 bg-white rounded-md shadow-md top-full group-hover:block">
+                            <li> 
+                                <a class="block px-4 py-2 hover:bg-gray-100" 
+                                href="{{ route('page.nesting.dashboard')}}">nesting.dashboard</a>
+                            </li>
+                        </ul>
+                        
+                    </li>
             </div>
         </div>
     </nav>
