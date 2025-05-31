@@ -1,4 +1,11 @@
 <div class="max-w-xl px-5 m-5 mx-auto" > 
+
+    <livewire:nesting.task.stat 
+    :tasks="$tasks"
+    /> 
+
+    <hr>
+    <br>
     <form wire:submit.prevent="addTask">
         <label for="">task :</label>
         <input type="text" name="task" id=""        
